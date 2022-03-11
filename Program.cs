@@ -5,7 +5,7 @@ namespace BeeCrowd___C_
 {
     class Program
     {
-        static void Desafio4()
+        static void Desafio2()
         {
             /*
             A fórmula para calcular a área de uma circunferência é: area = π . raio2. Considerando 
