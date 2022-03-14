@@ -81,6 +81,23 @@ namespace BeeCrowd___C_
         MEDIA = MEDIA / 10;
         Console.WriteLine("MEDIA = " + MEDIA.ToString("F1", nfi));
         }
+        
+        static void Desafio7()
+        {
+            /*Leia quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a diferença do produto de A 
+            e B pelo produto de C e D segundo a fórmula: DIFERENCA = (A * B - C * D).
+            Entrada
+            O arquivo de entrada contém 4 valores inteiros.
+            */
+        int A = int.Parse(Console.ReadLine());
+        int B = int.Parse(Console.ReadLine());
+        int C = int.Parse(Console.ReadLine());
+        int D = int.Parse(Console.ReadLine());
+        int diferenca = 0;
+        
+        diferenca = (A * B) - (C * D);
+        Console.WriteLine("DIFERENCA = "+ diferenca);
+        }
         static void Main(string[] args)
         {
             
