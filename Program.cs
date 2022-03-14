@@ -180,9 +180,55 @@ namespace BeeCrowd___C_
 
         Console.WriteLine("VOLUME = "+ volume.ToString("F3", nfi));
         }
+        
+        static void Desafio12()
+        {
+            /*
+            Escreva um programa que leia três valores com ponto flutuante de dupla precisão: A, B e C. Em 
+            seguida, calcule e mostre:
+            a) a área do triângulo retângulo que tem A por base e C por altura.
+            b) a área do círculo de raio C. (pi = 3.14159)
+            c) a área do trapézio que tem A e B por bases e C por altura.
+            d) a área do quadrado que tem lado B.
+            e) a área do retângulo que tem lados A e B.
+            Entrada
+            O arquivo de entrada contém três valores com um dígito após o ponto decimal.
+            Saída
+            O arquivo de saída deverá conter 5 linhas de dados. Cada linha corresponde a uma das áreas 
+            descritas acima, sempre com mensagem correspondente e um espaço entre os dois pontos e o valor. 
+            O valor calculado deve ser apresentado com 3 dígitos após o ponto decimal.
+            */
+            NumberFormatInfo nfi = (NumberFormatInfo)
+            CultureInfo.InvariantCulture.NumberFormat.Clone();
+            nfi.NumberGroupSeparator = ".";
+
+            string[] entradas = Console.ReadLine().Split(" ");
+            double A = double.Parse(entradas[0]), B = double.Parse(entradas[1]), C = double.Parse(entradas[2]);
+            double total = 0;
+            //área do triângulo retângulo que tem A por base e C por altura.
+            total = (A * C) / 2;
+            Console.WriteLine("TRIANGULO: "+ total.ToString("F3", nfi));
+
+            //área do círculo de raio C. (pi = 3.14159)
+            total = Math.Pow(C , 2);
+            total = 3.14159 * total;
+            Console.WriteLine("CIRCULO: "+ total.ToString("F3", nfi));
+
+            //área do trapézio que tem A e B por bases e C por altura.
+            total = ((A + B) * C) / 2 ;
+            Console.WriteLine("TRAPEZIO: "+ total.ToString("F3", nfi));
+
+            //área do quadrado que tem lado B.
+            total = B * B;
+            Console.WriteLine("QUADRADO: "+ total.ToString("F3", nfi));
+
+            //área do retângulo que tem lados A e B.
+            total = A * B;
+            Console.WriteLine("RETANGULO: "+ total.ToString("F3", nfi));
+        }
         static void Main(string[] args)
         {
-        
+            
         }
     }
 }
