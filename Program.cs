@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace BeeCrowd___C_
 {
@@ -269,11 +271,77 @@ namespace BeeCrowd___C_
 
     }
         
+        static void ExemploComoUsarColecao()
+        {
+            //Exemplo de uso de Coleção Genérica <T>
+            List<int> lista = new List<int>();
+            for(var i = 0; i < 60; i++)
+            {
+                lista.Add(i);
+            }
+            lista.Remove(50);
+
+            Console.WriteLine("\nList: ");
+            for(var x = 0; x < lista.Count; x++)
+            {
+                Console.WriteLine(lista[x] + " ");
+            }
+            lista.Sort();
+            Console.WriteLine("\nSorted: ");
+            for(var z = 0; z < lista.Count; z++)
+            {
+                Console.WriteLine(lista[z] + " ");
+            }
+        }
+        
+        static void ExemploSortedList()
+        {
+            //Exemplo de SortedList
+            SortedList<string, int> exemploSorted = new SortedList<string, int>();
+            exemploSorted.Add("A", 1);
+            exemploSorted.Add("Solo", 2);
+            exemploSorted.Add("C", 3);
+            Console.WriteLine("Sorted List: ");
+            foreach (string s in exemploSorted.Keys)
+            Console.WriteLine(s + ": " + exemploSorted[s]);
+            Console.WriteLine("\nCount: " + exemploSorted.Count); 
+        }
+        
+        static void ExemploBitArray(){
+            //Exemplo de BitArray
+            BitArray ba1 = new BitArray(4);
+            BitArray ba2 = new BitArray(4);
+
+            ba1.SetAll(true);
+            ba2.SetAll(false);
+
+            ba1.Set(2, false);
+            ba2.Set(3, true);
+
+            PrintBarr("ba1", ba1);
+            PrintBarr("ba2", ba2);
+            Console.WriteLine();
+
+            PrintBarr("ba1 AND ba2", ba1.And(ba2));
+            PrintBarr("    NOT ba2", ba2.Not());
+
+            static void PrintBarr(string name, BitArray ba)
+        {
+            Console.WriteLine(name + " : ");
+            for(int i = 0; i < ba.Length; i++)
+            {
+                Console.WriteLine(ba.Get(i) + " ");
+                Console.WriteLine();
+            }
+        }
+        }
+
         static void Main(string[] args)
         {
             
-            
         }
+
+        
         
         
         
