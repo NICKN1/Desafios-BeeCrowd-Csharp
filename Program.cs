@@ -318,6 +318,7 @@ namespace BeeCrowd___C_
             ba1.Set(2, false);
             ba2.Set(3, true);
 
+            //PrintBarr nome genérico para o método de imprimir o BitArray
             PrintBarr("ba1", ba1);
             PrintBarr("ba2", ba2);
             Console.WriteLine();
@@ -336,38 +337,34 @@ namespace BeeCrowd___C_
         }
         }
 
+
+        static void ExemploStackGenerica(){
+            //Exemplo de Stack Collection || Last in, First Out(LIFO)
+            Stack<int> pilha = new Stack<int>();
+            
+            //Para gerar numeros aleatórios	
+            Random randNum = new Random();
+            for (int i = 0; i < 10; i++)
+                pilha.Push(randNum.Next(100));
+
+            Console.WriteLine("Stack: ");
+            foreach (int i in pilha)
+                Console.Write(i + " ");
+            Console.Write("\nCount: " + pilha.Count); //Contando a quantidade de 10 itens dentro da pilha
+            Console.Write("\nTop: " + pilha.Peek()); //Mostrando o item do topo da pilha
+            Console.Write("\nPop: " + pilha.Pop()); //Removendo o item do topo da pilha
+            Console.Write("\nCount: " + pilha.Count); //Reduzindo a quantidade de item para 9
+        }
         static void Main(string[] args)
         {
             
+
+
+
         }
+        
 
         
-        
-        
-        
-        class Stack<T> {
-            // COMO USAR GENERICS NAS CLASSSE
-
-            /* USAR NO MAIN
-
-            Stack<int> intStack = new Stack<int>();
-            intStack.Push(45);
-            intStack.Push(32);
-            intStack.Push(6);
-
-            Console.WriteLine(intStack.Get(1));
-
-            */
-        int index=0;
-        T[] innerArray = new T[100];
-        public void Push(T item) {
-            innerArray[index++] = item; 
-        }
-        public T Pop() {
-            return innerArray[--index]; 
-        }
-        public T Get(int k) { return innerArray[k]; }
-        }
         
         }
     }
