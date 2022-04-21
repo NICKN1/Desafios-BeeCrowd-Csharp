@@ -337,7 +337,6 @@ namespace BeeCrowd___C_
         }
         }
 
-
         static void ExemploStackGenerica(){
             //Exemplo de Stack Collection || Last in, First Out(LIFO)
             Stack<int> pilha = new Stack<int>();
@@ -355,11 +354,28 @@ namespace BeeCrowd___C_
             Console.Write("\nPop: " + pilha.Pop()); //Removendo o item do topo da pilha
             Console.Write("\nCount: " + pilha.Count); //Reduzindo a quantidade de item para 9
         }
+        
+        static void ExemploQueue(){
+            //Exemplo de Queue Collection || First in, First Out(FIFO)
+            Queue<int> fila = new Queue<int>();
+
+            //Para adicionar itens na fila
+            Random randNum = new Random();
+            for (int i = 0; i < 5; i++)
+                fila.Enqueue(randNum.Next(100));
+            Console.Write("Queue: ");
+            foreach (int i in fila)
+                Console.Write(i + " ");
+            Console.Write("\nCount: " + fila.Count); //Contando a quantidade de 5 itens dentro da fila
+            Console.Write("\nDequeue: " + fila.Dequeue()); //Removendo o item do topo da fila
+
+            Console.Write("\nQueue: ");
+            foreach (int i in fila)
+                Console.Write(i + " ");
+        }
         static void Main(string[] args)
         {
             
-
-
 
         }
         
