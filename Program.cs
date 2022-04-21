@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.IO;
 
 namespace BeeCrowd___C_
 {
@@ -226,9 +227,81 @@ namespace BeeCrowd___C_
             total = A * B;
             Console.WriteLine("RETANGULO: "+ total.ToString("F3", nfi));
         }
+        
+        static void comoUsarOperador()
+        {
+            string name1 = Console.ReadLine();
+            int points1 = Convert.ToInt32(Console.ReadLine());
+            string name2 = Console.ReadLine();
+            int points2 = Convert.ToInt32(Console.ReadLine());
+
+            DancerPoints dancer1 = new DancerPoints(name1, points1);
+            DancerPoints dancer2 = new DancerPoints(name2, points2);
+
+            DancerPoints total = dancer1 + dancer2;
+            Console.WriteLine(total.name);
+            Console.WriteLine(total.points);
+
+        }
+            class DancerPoints
+    {
+        public string name;
+        public int points;
+        public DancerPoints(string name, int points)
+        {
+            this.name = name;
+            this.points = points;
+        }
+
+        //overload the + operator
+
+        public static DancerPoints operator+(DancerPoints d1, DancerPoints d2)
+        {
+
+
+            
+            DancerPoints total = new DancerPoints(d1.name + " & " + d2.name, d1.points + d2.points);
+            return total;
+        }
+        
+            
+        
+
+    }
+        
         static void Main(string[] args)
         {
             
+            
+        }
+        
+        
+        
+        class Stack<T> {
+            // COMO USAR GENERICS NAS CLASSSE
+
+            /* USAR NO MAIN
+
+            Stack<int> intStack = new Stack<int>();
+            intStack.Push(45);
+            intStack.Push(32);
+            intStack.Push(6);
+
+            Console.WriteLine(intStack.Get(1));
+
+            */
+        int index=0;
+        T[] innerArray = new T[100];
+        public void Push(T item) {
+            innerArray[index++] = item; 
+        }
+        public T Pop() {
+            return innerArray[--index]; 
+        }
+        public T Get(int k) { return innerArray[k]; }
+        }
+        
         }
     }
-}
+ 
+

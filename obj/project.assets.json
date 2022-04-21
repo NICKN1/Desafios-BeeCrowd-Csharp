@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\irani\\OneDrive\\Documentos\\BeeCrowd - C#\\BeeCrowd - C#.csproj",
+      "projectUniqueName": "C:\\Users\\irani\\OneDrive\\Documentos\\ESTUDOS\\BeeCrowd - C#\\BeeCrowd - C#.csproj",
       "projectName": "BeeCrowd - C#",
-      "projectPath": "c:\\Users\\irani\\OneDrive\\Documentos\\BeeCrowd - C#\\BeeCrowd - C#.csproj",
+      "projectPath": "C:\\Users\\irani\\OneDrive\\Documentos\\ESTUDOS\\BeeCrowd - C#\\BeeCrowd - C#.csproj",
       "packagesPath": "C:\\Users\\irani\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\irani\\OneDrive\\Documentos\\BeeCrowd - C#\\obj\\",
+      "outputPath": "C:\\Users\\irani\\OneDrive\\Documentos\\ESTUDOS\\BeeCrowd - C#\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual 2019 Componentes\\NuGetPackages"
