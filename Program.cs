@@ -388,6 +388,29 @@ namespace BeeCrowd___C_
                 Console.Write(s + ": " + dic[s] + " "); //Retorna a chave e o valor
             Console.Write("\nCount: {0}", dic.Count); //Contando a quantidade de itens dentro do dicionário
         }
+
+        static void ExemploHashSet()
+        {
+            //Exemplo de HashSet
+            HashSet<int> hs = new HashSet<int>();
+            hs.Add(1);
+            hs.Add(2);
+            hs.Add(3);
+            hs.Add(4);
+            hs.Add(5);
+
+            Console.Write("\nHashSet: ");
+            foreach (int i in hs)
+                Console.Write(i + " "); //Retorna os itens do HashSet
+            Console.Write("\nCount: {0}", hs.Count); //Contando a quantidade de itens dentro do HashSet
+
+            HashSet<int> hs1 = new HashSet<int>();
+            hs1.Add(1);
+            hs1.Add(2);
+
+            //Para descobrir se os valores de hs1 estão em hs (subconjunto)
+            Console.Write("\n{1, 2} is a subset of {1, 2, 3, 4, 5}: " + hs1.IsSubsetOf(hs));
+        }
         static void Main(string[] args)
         {
             
