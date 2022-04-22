@@ -373,9 +373,25 @@ namespace BeeCrowd___C_
             foreach (int i in fila)
                 Console.Write(i + " ");
         }
+
+        static void ExemploDictionary(){
+            //Exemplo de Dictionary Collection
+            //Dictionary<Key, Value>
+            Dictionary<string, int> dic = new Dictionary<string, int>();
+            dic.Add("A", 1);
+            dic.Add("B", 2);
+            dic.Add("C", 3);
+            dic.Remove("A"); //Remove o item com a chave "A"
+
+            Console.Write("Dictionary: ");
+            foreach (string s in dic.Keys)
+                Console.Write(s + ": " + dic[s] + " "); //Retorna a chave e o valor
+            Console.Write("\nCount: {0}", dic.Count); //Contando a quantidade de itens dentro do dicionário
+        }
         static void Main(string[] args)
         {
             
+
 
         }
         
